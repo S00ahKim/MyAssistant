@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditAssistant.class);
+                Intent intent = new Intent(getApplicationContext(), EditAssistantFH.class);
                 startActivity(intent);
             }
         });

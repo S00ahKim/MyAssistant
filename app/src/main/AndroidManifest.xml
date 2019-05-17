@@ -17,8 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Market" />
-        <activity android:name=".EditAssistant" />
-        <activity android:name=".MySkin"></activity>
+        <activity android:name=".MySkin" />
+        <activity android:name=".EditAssistantBH" />
+        <activity android:name=".EditAssistantACC" />
+        <activity android:name=".EditAssistantCL" />
+        <activity android:name=".EditAssistantAP"></activity>
     </application>
 
 </manifest>

@@ -36,25 +36,19 @@
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="150dp">
 
-                <!-- 첫 번째 페이지. content1 -->
+                <!-- 첫 번째 페이지. content1 인기-->
                 <LinearLayout
                     android:id="@+id/content1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#FA58AC"
-                        android:gravity="center"
-                        android:padding="8dp"/>
 
                 </LinearLayout>
 
-                <!-- 두 번째 페이지. content2 -->
+                <!-- 두 번째 페이지. content2 여성-->
                 <LinearLayout
                     android:id="@+id/content2"
                     android:layout_width="match_parent"
@@ -71,23 +65,23 @@
 
                 </LinearLayout>
 
-                <!-- 세 번째 페이지. content3 -->
+                <!-- 세 번째 페이지. content3 남성-->
                 <LinearLayout
-                android:id="@+id/content3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
+                    android:id="@+id/content3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#2196F3"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="TAB CONTENT 3" />
+                    android:orientation="vertical">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#2196F3"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="TAB CONTENT 3" />
 
+                </LinearLayout>
+                <!-- 네 번째 페이지. content4 기타-->
                 <LinearLayout
                     android:id="@+id/content4"
                     android:layout_width="match_parent"
