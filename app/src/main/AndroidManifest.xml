@@ -18,10 +18,14 @@
         </activity>
         <activity android:name=".Market" />
         <activity android:name=".MySkin" />
+        <activity android:name=".EditAssistantFH" />
         <activity android:name=".EditAssistantBH" />
         <activity android:name=".EditAssistantACC" />
         <activity android:name=".EditAssistantCL" />
-        <activity android:name=".EditAssistantAP"></activity>
+        <activity android:name=".EditAssistantAP" />
+        <activity android:name=".EditAssistantEYE" />
+        <activity android:name=".EditBackground" />
+        <activity android:name=".FinalShow"></activity>
     </application>
 
 </manifest>

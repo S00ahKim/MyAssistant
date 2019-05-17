@@ -19,7 +19,7 @@ public class EditAssistantACC extends AppCompatActivity {
         prevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditAssistantCL.class);
+                Intent intent = new Intent(getApplicationContext(), EditAssistantAP.class);
                 startActivity(intent);
             }
         });
@@ -27,7 +27,7 @@ public class EditAssistantACC extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditAssistantAP.class);
+                Intent intent = new Intent(getApplicationContext(), EditBackground.class);
                 startActivity(intent);
             }
         });

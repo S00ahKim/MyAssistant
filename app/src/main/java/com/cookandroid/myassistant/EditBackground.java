@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class EditAssistantAP extends AppCompatActivity {
+public class EditBackground extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_assistant_ap);
+        setContentView(R.layout.activity_edit_background);
 
         Button prevButton = (Button) findViewById(R.id.prev) ;
         Button nextButton = (Button) findViewById(R.id.next) ;
@@ -19,7 +19,7 @@ public class EditAssistantAP extends AppCompatActivity {
         prevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditAssistantCL.class);
+                Intent intent = new Intent(getApplicationContext(), EditAssistantACC.class);
                 startActivity(intent);
             }
         });
@@ -27,7 +27,7 @@ public class EditAssistantAP extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditAssistantACC.class);
+                Intent intent = new Intent(getApplicationContext(), FinalShow.class);
                 startActivity(intent);
             }
         });

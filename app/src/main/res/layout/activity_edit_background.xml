@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditAssistantAP">
+    tools:context=".EditBackground">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:padding="10dp"
-        android:text="앞치마"
+        android:text="배경"
         android:textColor="#000000"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,19 +71,19 @@
 
             <ImageView
                 android:layout_height="80dp"
-                android:src="@drawable/ap1" />
+                android:src="@drawable/bg1" />
 
             <ImageView
                 android:layout_height="80dp"
-                android:src="@drawable/ap2" />
+                android:src="@drawable/bg2" />
 
             <ImageView
                 android:layout_height="80dp"
-                android:src="@drawable/ap3" />
+                android:src="@drawable/bg3" />
 
             <ImageView
                 android:layout_height="80dp"
-                android:src="@drawable/ap4" />
+                android:src="@drawable/bg4" />
 
         </TableRow>
     </TableLayout>
@@ -104,7 +104,7 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="다음으로"
+        android:text="저장하기"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.861"
         app:layout_constraintLeft_toLeftOf="parent"

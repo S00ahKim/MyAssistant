@@ -27,7 +27,7 @@ public class EditAssistantCL extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditAssistantACC.class);
+                Intent intent = new Intent(getApplicationContext(), EditAssistantAP.class);
                 startActivity(intent);
             }
         });
