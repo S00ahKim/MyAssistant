@@ -5,8 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class EditAssistantBH extends AppCompatActivity {
+    ImageView imageview1 = null, imageview2 = null, imageview3=null, imageview4=null, imageview5=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,36 @@ public class EditAssistantBH extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        imageview1 = (ImageView)findViewById(R.id.mainImage);
+        imageview2 = (ImageView)findViewById(R.id.longcurlyhair);
+        imageview5 = (ImageView)findViewById(R.id.twintail);
+
+        imageview3 = (ImageView)findViewById(R.id.longcurlyhairSRC);
+        imageview4 = (ImageView)findViewById(R.id.twintailSRC);
+
+        imageview1.setVisibility(View.VISIBLE);
+        imageview2.setVisibility(View.INVISIBLE);
+        imageview5.setVisibility(View.INVISIBLE);
+
+        imageview3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                imageview2.setVisibility(View.VISIBLE);
+                imageview1.setVisibility(View.INVISIBLE);
+                imageview5.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        imageview4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                imageview5.setVisibility(View.VISIBLE);
+                imageview2.setVisibility(View.INVISIBLE);
+                imageview1.setVisibility(View.INVISIBLE);
+            }
+        });
+
 
     }
 }

@@ -35,6 +35,31 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.281" />
 
+    <!--변경될 이미지-->
+    <ImageView
+        android:id="@+id/longcurlyhair"
+        android:layout_width="213dp"
+        android:layout_height="222dp"
+        android:src="@drawable/longcurlyhair"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
+
+    <ImageView
+        android:id="@+id/twintail"
+        android:layout_width="213dp"
+        android:layout_height="222dp"
+        android:src="@drawable/twintail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
+
     <ImageView
         android:id="@+id/paint"
         android:layout_width="50dp"
@@ -80,10 +105,12 @@
                 android:src="@drawable/bh2" />
 
             <ImageView
+                android:id="@+id/longcurlyhairSRC"
                 android:layout_height="80dp"
                 android:src="@drawable/bh3" />
 
             <ImageView
+                android:id="@+id/twintailSRC"
                 android:layout_height="80dp"
                 android:src="@drawable/bh4" />
 
