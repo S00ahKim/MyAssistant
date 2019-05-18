@@ -36,7 +36,7 @@
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
-                android:layout_height="150dp">
+                android:layout_height="wrap_content">
 
                 <!-- 첫 번째 페이지. content1 인기-->
                 <LinearLayout
@@ -45,6 +45,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/my_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical" />
 
                 </LinearLayout>
 
