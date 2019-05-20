@@ -10,9 +10,24 @@ import java.util.ArrayList;
 
 public class Market extends AppCompatActivity {
     private RecyclerView mRecyclerView;
+    private RecyclerView fRecyclerView;
+    private RecyclerView nRecyclerView;
+    private RecyclerView eRecyclerView;
+
     private RecyclerView.Adapter mAdapter;
+    private RecyclerView.Adapter fAdapter;
+    private RecyclerView.Adapter nAdapter;
+    private RecyclerView.Adapter eAdapter;
+
     private RecyclerView.LayoutManager mLayoutManager;
+    private RecyclerView.LayoutManager fLayoutManager;
+    private RecyclerView.LayoutManager nLayoutManager;
+    private RecyclerView.LayoutManager eLayoutManager;
+
     private ArrayList<MyData> myDataset;
+    private ArrayList<MyData> femaleDataset;
+    private ArrayList<MyData> maleDataset;
+    private ArrayList<MyData> etcDataset;
 
 
     @Override
@@ -44,6 +59,7 @@ public class Market extends AppCompatActivity {
         ts4.setIndicator("기타");
         tabHost1.addTab(ts4);
 
+        // 인기 아이템
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
         // use this setting to improve performance if you know that changes
@@ -61,8 +77,73 @@ public class Market extends AppCompatActivity {
 
         // 이 부분으로 데이터를 추가하는 것!!
         myDataset.add(new MyData("루시아", "핑크조아", "#분홍머리, #공주님", R.drawable.favitem1));
-        myDataset.add(new MyData("루시아", "댕댕이", "#멍멍이와_함께, #안경, #발랄", R.drawable.favitem2));
-        myDataset.add(new MyData("루시아", "MyAssistant", "#기본이_최고", R.drawable.defaultimage));
+        myDataset.add(new MyData("강아지안은꼬마", "댕댕이", "#멍멍이와_함께, #안경, #발랄", R.drawable.favitem2));
+        myDataset.add(new MyData("기본이미지", "MyAssistant", "#기본이_최고", R.drawable.defaultimage));
+
+        // 여성 목록--------------------------------------------------------------------------------------------------------------
+        fRecyclerView = (RecyclerView) findViewById(R.id.femaleItemMarket);
+
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        fRecyclerView.setHasFixedSize(true);
+
+        // use a linear layout manager
+        fLayoutManager = new LinearLayoutManager(this);
+        fRecyclerView.setLayoutManager(fLayoutManager);
+
+        // specify an adapter (see also next example)
+        femaleDataset = new ArrayList<>();
+        fAdapter = new MyAdapter(femaleDataset);
+        fRecyclerView.setAdapter(fAdapter);
+
+        // 이 부분으로 데이터를 추가하는 것!!
+        femaleDataset.add(new MyData("갈색머리", "soyoung3", "#갈색머리, #초록눈", R.drawable.femaleitem1));
+        femaleDataset.add(new MyData("엘사", "프로즌짱", "#하얀머리, #차분, #파란색", R.drawable.femaleitem2));
+        femaleDataset.add(new MyData("붉은악마", "오필승코리아", "#카드놀이, #게임지원", R.drawable.femaleitem3));
+        femaleDataset.add(new MyData("파이걸", "쿠우", "#검은머리, #파이만들기, #갈색배경", R.drawable.femaleitem4));
+
+        // 남성 목록----------------------------------------------------------------------------------------------------------------
+        nRecyclerView = (RecyclerView) findViewById(R.id.maleItemMarket);
+
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        nRecyclerView.setHasFixedSize(true);
+
+        // use a linear layout manager
+        nLayoutManager = new LinearLayoutManager(this);
+        nRecyclerView.setLayoutManager(nLayoutManager);
+
+        // specify an adapter (see also next example)
+        maleDataset = new ArrayList<>();
+        nAdapter = new MyAdapter(maleDataset);
+        nRecyclerView.setAdapter(nAdapter);
+
+        // 이 부분으로 데이터를 추가하는 것!!
+        maleDataset.add(new MyData("철수", "철수주인", "#양복, #파란배경", R.drawable.maleitem1));
+        maleDataset.add(new MyData("무서운녀석", "jung2", "#한대칠것같아요, #무섭지만착해요", R.drawable.maleitem2));
+        maleDataset.add(new MyData("유에", "체리가좋아", "#망했어요, #아무리봐도유에아님", R.drawable.maleitem3));
+        maleDataset.add(new MyData("특이한애", "xmrdlxmrdl", "#보라머리, #안경", R.drawable.maleitem4));
+
+        // 기타 목록--------------------------------------------------------------------------------------------------------------
+        eRecyclerView = (RecyclerView) findViewById(R.id.etcItemMarket);
+
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        eRecyclerView.setHasFixedSize(true);
+
+        // use a linear layout manager
+        eLayoutManager = new LinearLayoutManager(this);
+        eRecyclerView.setLayoutManager(eLayoutManager);
+
+        // specify an adapter (see also next example)
+        etcDataset = new ArrayList<>();
+        eAdapter = new MyAdapter(etcDataset);
+        eRecyclerView.setAdapter(eAdapter);
+
+        // 이 부분으로 데이터를 추가하는 것!!
+        etcDataset.add(new MyData("생선주세요", "todtjswn", "#점박이, #고양이", R.drawable.etcitem1));
+        etcDataset.add(new MyData("책읽는 야옹이", "cat", "#무슨책을읽고있니", R.drawable.etcitem2));
+        etcDataset.add(new MyData("루니", "루니맘", "#꽃이_좋은_고양이, #리본꼬리", R.drawable.etcitem3));
 
 
     }
