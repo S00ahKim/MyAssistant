@@ -22,7 +22,8 @@ public class EditAssistantBH extends AppCompatActivity {
         prevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "구매가 완료되었습니다.", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(), EditAssistantFH.class);
+                startActivity(intent);
             }
         });
 

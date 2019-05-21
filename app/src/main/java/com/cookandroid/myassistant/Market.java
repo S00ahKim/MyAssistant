@@ -27,10 +27,10 @@ public class Market extends AppCompatActivity {
     private RecyclerView.LayoutManager nLayoutManager;
     private RecyclerView.LayoutManager eLayoutManager;
 
-    private ArrayList<MyData> myDataset;
-    private ArrayList<MyData> femaleDataset;
-    private ArrayList<MyData> maleDataset;
-    private ArrayList<MyData> etcDataset;
+    public static ArrayList<MyData> myDataset;
+    public ArrayList<MyData> femaleDataset;
+    public ArrayList<MyData> maleDataset;
+    public ArrayList<MyData> etcDataset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,9 +80,9 @@ public class Market extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
 
         // 이 부분으로 데이터를 추가하는 것!!
-        myDataset.add(new MyData("루시아", "핑크조아", "#분홍머리, #공주님", R.drawable.favitem1));
-        myDataset.add(new MyData("강아지안은꼬마", "댕댕이", "#멍멍이와_함께, #안경, #발랄", R.drawable.favitem2));
-        myDataset.add(new MyData("기본이미지", "MyAssistant", "#기본이_최고", R.drawable.defaultimage));
+        myDataset.add(new MyData("루시아", "핑크조아", "#분홍머리, #공주님", R.drawable.favitem1, "분홍색을 좋아하시는 분들을 위해 만들어 보았습니다 ^^ 예쁘게 써주세요!", 300));
+        myDataset.add(new MyData("강아지안은꼬마", "댕댕이", "#멍멍이와_함께, #안경, #발랄", R.drawable.favitem2, "강아지를 안은 꼬마가 제일 귀여운 법!!", 500));
+        myDataset.add(new MyData("기본이미지", "MyAssistant", "#기본이_최고", R.drawable.defaultimage, "기본으로 제공되는 이미지입니다.", 0));
 
         // 여성 목록--------------------------------------------------------------------------------------------------------------
         fRecyclerView = (RecyclerView) findViewById(R.id.femaleItemMarket);
@@ -101,10 +101,10 @@ public class Market extends AppCompatActivity {
         fRecyclerView.setAdapter(fAdapter);
 
         // 이 부분으로 데이터를 추가하는 것!!
-        femaleDataset.add(new MyData("갈색머리", "soyoung3", "#갈색머리, #초록눈", R.drawable.femaleitem1));
-        femaleDataset.add(new MyData("엘사", "프로즌짱", "#하얀머리, #차분, #파란색", R.drawable.femaleitem2));
-        femaleDataset.add(new MyData("붉은악마", "오필승코리아", "#카드놀이, #게임지원", R.drawable.femaleitem3));
-        femaleDataset.add(new MyData("파이걸", "쿠우", "#검은머리, #파이만들기, #갈색배경", R.drawable.femaleitem4));
+        femaleDataset.add(new MyData("갈색머리", "soyoung3", "#갈색머리, #초록눈", R.drawable.femaleitem1,"",100));
+        femaleDataset.add(new MyData("엘사", "프로즌짱", "#하얀머리, #차분, #파란색", R.drawable.femaleitem2,"",100));
+        femaleDataset.add(new MyData("붉은악마", "오필승코리아", "#카드놀이, #게임지원", R.drawable.femaleitem3,"",100));
+        femaleDataset.add(new MyData("파이걸", "쿠우", "#검은머리, #파이만들기, #갈색배경", R.drawable.femaleitem4,"",100));
 
         // 남성 목록----------------------------------------------------------------------------------------------------------------
         nRecyclerView = (RecyclerView) findViewById(R.id.maleItemMarket);
@@ -123,10 +123,10 @@ public class Market extends AppCompatActivity {
         nRecyclerView.setAdapter(nAdapter);
 
         // 이 부분으로 데이터를 추가하는 것!!
-        maleDataset.add(new MyData("철수", "철수주인", "#양복, #파란배경", R.drawable.maleitem1));
-        maleDataset.add(new MyData("무서운녀석", "jung2", "#한대칠것같아요, #무섭지만착해요", R.drawable.maleitem2));
-        maleDataset.add(new MyData("유에", "체리가좋아", "#망했어요, #아무리봐도유에아님", R.drawable.maleitem3));
-        maleDataset.add(new MyData("특이한애", "xmrdlxmrdl", "#보라머리, #안경", R.drawable.maleitem4));
+        maleDataset.add(new MyData("철수", "철수주인", "#양복, #파란배경", R.drawable.maleitem1,"",100));
+        maleDataset.add(new MyData("무서운녀석", "jung2", "#한대칠것같아요, #무섭지만착해요", R.drawable.maleitem2,"",100));
+        maleDataset.add(new MyData("유에", "체리가좋아", "#망했어요, #아무리봐도유에아님", R.drawable.maleitem3,"",100));
+        maleDataset.add(new MyData("특이한애", "xmrdlxmrdl", "#보라머리, #안경", R.drawable.maleitem4,"",100));
 
         // 기타 목록--------------------------------------------------------------------------------------------------------------
         eRecyclerView = (RecyclerView) findViewById(R.id.etcItemMarket);
@@ -145,9 +145,9 @@ public class Market extends AppCompatActivity {
         eRecyclerView.setAdapter(eAdapter);
 
         // 이 부분으로 데이터를 추가하는 것!!
-        etcDataset.add(new MyData("생선주세요", "todtjswn", "#점박이, #고양이", R.drawable.etcitem1));
-        etcDataset.add(new MyData("책읽는 야옹이", "cat", "#무슨책을읽고있니", R.drawable.etcitem2));
-        etcDataset.add(new MyData("루니", "루니맘", "#꽃이_좋은_고양이, #리본꼬리", R.drawable.etcitem3));
+        etcDataset.add(new MyData("생선주세요", "todtjswn", "#점박이, #고양이", R.drawable.etcitem1,"",100));
+        etcDataset.add(new MyData("책읽는 야옹이", "cat", "#무슨책을읽고있니", R.drawable.etcitem2,"",100));
+        etcDataset.add(new MyData("루니", "루니맘", "#꽃이_좋은_고양이, #리본꼬리", R.drawable.etcitem3,"",100));
 
 
     }

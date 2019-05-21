@@ -47,13 +47,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 .inflate(R.layout.my_view, parent, false);
 
         // set the view's size, margins, paddings and layout parameter
-        ViewHolder vh = new ViewHolder(v);
-        clickedPosition = vh.getAdapterPosition();
+        final ViewHolder vh = new ViewHolder(v);
 
         vh.itemView.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
+                clickedPosition = vh.getAdapterPosition();
                 Intent intent = new Intent(view.getContext(), MarketDetail.class);
-                intent.putExtra("position",clickedPosition);
+                intent.putExtra("title", mDataset.get(clickedPosition).title);
+                intent.putExtra("author", mDataset.get(clickedPosition).author);
+                intent.putExtra("img", mDataset.get(clickedPosition).img);
+                intent.putExtra("detail", mDataset.get(clickedPosition).detail);
+                intent.putExtra("tag", mDataset.get(clickedPosition).text);
+                intent.putExtra("price", mDataset.get(clickedPosition).price);
                 view.getContext().startActivity(intent);
             }
         });
@@ -84,26 +89,15 @@ class MyData{
     public String title;
     public String author;
 
-    public MyData(String title, String author, String text, int img){
+    public String detail;
+    public int price;
+
+    public MyData(String title, String author, String text, int img, String detail, int price){
         this.title = title;
         this.author = author;
         this.text = text;
         this.img = img;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public int getImg() {
-        return img;
+        this.detail = detail;
+        this.price = price;
     }
 }
