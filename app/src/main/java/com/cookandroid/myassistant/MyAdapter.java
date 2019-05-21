@@ -1,5 +1,6 @@
 package com.cookandroid.myassistant;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private ArrayList<MyData> mDataset;
+    public int clickedPosition;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -26,7 +28,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             super(view);
             Title = (TextView)view.findViewById(R.id.itemTitle);
             Author = (TextView) view.findViewById(R.id.author);
-            mImageView = (ImageView)view.findViewById(R.id.image);
+            mImageView = (ImageView)view.findViewById(R.id.cardImage);
             mTextView = (TextView)view.findViewById(R.id.textview);
         }
     }
@@ -43,8 +45,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         // create a new view
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.my_view, parent, false);
+
         // set the view's size, margins, paddings and layout parameter
         ViewHolder vh = new ViewHolder(v);
+        clickedPosition = vh.getAdapterPosition();
+
+        vh.itemView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), MarketDetail.class);
+                intent.putExtra("position",clickedPosition);
+                view.getContext().startActivity(intent);
+            }
+        });
         return vh;
     }
 
@@ -77,5 +89,21 @@ class MyData{
         this.author = author;
         this.text = text;
         this.img = img;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public int getImg() {
+        return img;
     }
 }

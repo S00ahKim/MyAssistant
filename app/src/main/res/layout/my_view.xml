@@ -24,7 +24,7 @@
                 android:layout_margin="8dp"
                 card_view:cardCornerRadius="4dp">
 
-                <ImageView android:id="@+id/image"
+                <ImageView android:id="@+id/cardImage"
                     android:scaleType="centerCrop"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />

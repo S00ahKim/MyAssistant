@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class EditAssistantBH extends AppCompatActivity {
     ImageView imageview1 = null, imageview2 = null, imageview3=null, imageview4=null, imageview5=null;
@@ -21,8 +22,7 @@ public class EditAssistantBH extends AppCompatActivity {
         prevButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditAssistantFH.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "구매가 완료되었습니다.", Toast.LENGTH_LONG).show();
             }
         });
 

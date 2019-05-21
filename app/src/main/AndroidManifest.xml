@@ -25,7 +25,8 @@
         <activity android:name=".EditAssistantAP" />
         <activity android:name=".EditAssistantEYE" />
         <activity android:name=".EditBackground" />
-        <activity android:name=".FinalShow"></activity>
+        <activity android:name=".FinalShow" />
+        <activity android:name=".MarketDetail"></activity>
     </application>
 
 </manifest>

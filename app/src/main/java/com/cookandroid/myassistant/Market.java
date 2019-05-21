@@ -1,9 +1,12 @@
 package com.cookandroid.myassistant;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TabHost;
 
 import java.util.ArrayList;
@@ -28,7 +31,6 @@ public class Market extends AppCompatActivity {
     private ArrayList<MyData> femaleDataset;
     private ArrayList<MyData> maleDataset;
     private ArrayList<MyData> etcDataset;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,8 @@ public class Market extends AppCompatActivity {
         ts4.setContent(R.id.content4);
         ts4.setIndicator("기타");
         tabHost1.addTab(ts4);
+
+        //-----------------------------------------------------------------------------------------------------------
 
         // 인기 아이템
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
