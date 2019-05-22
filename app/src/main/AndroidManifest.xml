@@ -26,7 +26,8 @@
         <activity android:name=".EditAssistantEYE" />
         <activity android:name=".EditBackground" />
         <activity android:name=".FinalShow" />
-        <activity android:name=".MarketDetail"></activity>
+        <activity android:name=".MarketDetail" />
+        <activity android:name=".SkinDetail"></activity>
     </application>
 
 </manifest>
