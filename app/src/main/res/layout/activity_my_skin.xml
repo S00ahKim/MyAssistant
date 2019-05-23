@@ -16,6 +16,36 @@
         android:textSize="40sp"
         android:textColor="#000000"/>
 
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addMySkin"
+            android:text= "스킨 추가하기"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addNewStyleSkin"
+            android:text= "다른 스타일로 만들기"
+            android:textAlignment="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_skin_view"
         android:layout_width="match_parent"
