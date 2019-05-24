@@ -46,7 +46,7 @@
             android:id="@+id/nameedit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="여기에 이름을 입력해주세요."
+            android:hint="이름은 무엇인가요?"
             android:textAlignment="center"
             android:textSize="25sp" />
 
@@ -56,47 +56,46 @@
             android:layout_width="wrap_content"
             android:textSize="20dp"
             android:text="입력"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:background="#0000"/>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/editButton"
-        android:layout_width="259dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="편집하기"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75"
-        android:background="#58ACFA"/>
+        app:layout_constraintVertical_bias="0.95">
 
-    <Button
-        android:id="@+id/mySkinButton"
-        android:layout_width="259dp"
-        android:layout_height="wrap_content"
-        android:text="내가 만든 스킨 보기"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85"
-        android:background="#E6E6E6"/>
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:background="#58ACFA"
+            android:layout_margin="10dp"/>
 
-    <Button
-        android:id="@+id/marketButton"
-        android:layout_width="259dp"
-        android:layout_height="wrap_content"
-        android:text="마켓 구경하기"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95"
-        android:background="#E6E6E6"/>
+        <Button
+            android:id="@+id/mySkinButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Skin"
+            android:background="#E6E6E6"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/marketButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Market"
+            android:background="#E6E6E6"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

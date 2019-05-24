@@ -132,6 +132,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="내 어조와 유사하게 학습"
+        android:id="@+id/learnlikemetxt"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.189"
@@ -150,6 +151,20 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.674" />
+
+    <TextView
+        android:id="@+id/explain"
+        android:layout_width="259dp"
+        android:layout_height="wrap_content"
+        android:background="#58ACFA"
+        android:text="사용자가 평소 말하는 어투를 분석하여 비슷한 방식으로 말하게 하는 기능입니다."
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783" />
 
     <Button
         android:id="@+id/prev"
