@@ -24,25 +24,27 @@
         android:layout_width="match_parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="9"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/addMySkin"
-            android:text= "스킨 추가하기"
+            android:text= "스킨 \n추가"
             android:textAlignment="center"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="#58ACFA"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/addNewStyleSkin"
-            android:text= "다른 스타일로 만들기"
+            android:text= "다른 \n스타일"
             android:textAlignment="center"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="#E6E6E6"/>
     </LinearLayout>
 
 
