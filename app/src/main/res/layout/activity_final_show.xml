@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FinalShow">
+    tools:context=".FinalShow"
+    android:background="@drawable/defaultbg">
 
     <TextView
         android:layout_width="match_parent"
@@ -22,55 +23,46 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="264dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="10dp"
-        android:text="아래 이미지는 마이스트 홈페이지에서 구매할 수 있는 액자 디스플레이에서 확인할 수 있습니다. "
+        android:text="어시스턴트 디스플레이는 마이스트 홈페이지의 액자 프레임에서 가능합니다. "
         android:textColor="#000000"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.112" />
+        app:layout_constraintVertical_bias="0.087" />
 
-    <ImageView
-        android:id="@+id/mainImage"
-        android:layout_width="213dp"
-        android:layout_height="302dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/defaultimage"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.95">
 
-    <Button
-        android:id="@+id/setMyFrame"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:background="#58ACFA"
-        android:text="내 프레임에 적용하기"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853" />
+        <Button
+            android:id="@+id/setMyFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Frame"
+            android:background="#58ACFA"
+            android:layout_margin="10dp"/>
 
-    <Button
-        android:id="@+id/saveMySkin"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:background="#D8D8D8"
-        android:text="내가 만든 스킨에 저장하기"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949" />
+        <Button
+            android:id="@+id/saveMySkin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:background="#E6E6E6"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

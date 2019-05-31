@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    int clicked = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +41,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button editButton = (Button) findViewById(R.id.editButton) ;
-        Button mySkinButton = (Button) findViewById(R.id.mySkinButton);
+        final Button editButton = (Button) findViewById(R.id.editButton) ;
+        final Button mySkinButton = (Button) findViewById(R.id.mySkinButton);
         Button marketButton = (Button) findViewById(R.id.marketButton);
+        Button editButtonComp = (Button) findViewById(R.id.editButtonComp);
+
+        editButton.setVisibility(View.INVISIBLE);
+        mySkinButton.setVisibility(View.INVISIBLE);
+
+        editButtonComp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (clicked==0){
+                    editButton.setVisibility(View.VISIBLE);
+                    mySkinButton.setVisibility(View.VISIBLE);
+                    clicked +=1;
+                }
+                else {
+                    editButton.setVisibility(View.INVISIBLE);
+                    mySkinButton.setVisibility(View.INVISIBLE);
+                    clicked -=1;
+                }
+            }
+        });
 
         editButton.setOnClickListener(new View.OnClickListener() {
             @Override
