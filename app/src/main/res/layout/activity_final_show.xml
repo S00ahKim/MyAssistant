@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="10dp"
-        android:text="어시스턴트 디스플레이는 마이스트 홈페이지의 액자 프레임에서 가능합니다. "
+        android:text="어시스턴트 디스플레이는 마이스트 홈페이지의 액자 프레임에서 가능합니다."
         android:textColor="#000000"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"

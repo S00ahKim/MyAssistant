@@ -17,24 +17,37 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Market" />
-        <activity android:name=".MySkin" />
-        <activity android:name=".EditAssistantFH" />
-        <activity android:name=".EditAssistantBH" />
-        <activity android:name=".EditAssistantACC" />
-        <activity android:name=".EditAssistantCL" />
-        <activity android:name=".EditAssistantAP" />
-        <activity android:name=".EditAssistantEYE" />
-        <activity android:name=".EditBackground" />
-        <activity android:name=".FinalShow" />
-        <activity android:name=".MarketDetail" />
-        <activity android:name=".SkinDetail" />
+        <activity android:name=".Market"
+            android:label="마켓"/>
+        <activity android:name=".MySkin"
+            android:label="내가 만든 스킨"/>
+        <activity android:name=".EditAssistantFH"
+            android:label="앞머리"/>
+        <activity android:name=".EditAssistantBH"
+            android:label="뒷머리"/>
+        <activity android:name=".EditAssistantACC"
+            android:label="액세서리"/>
+        <activity android:name=".EditAssistantCL"
+            android:label="의상"/>
+        <activity android:name=".EditAssistantAP"
+            android:label="앞치마"/>
+        <activity android:name=".EditAssistantEYE"
+            android:label="눈"/>
+        <activity android:name=".EditBackground"
+            android:label="배경"/>
+        <activity android:name=".FinalShow"
+            android:label="최종"/>
+        <activity android:name=".MarketDetail"
+            android:label="상품 상세"/>
+        <activity android:name=".SkinDetail"
+            android:label="스킨 상세"/>
         <activity
             android:name=".AddNewStyleSkin"
             android:configChanges="orientation|keyboardHidden|screenSize"> <!-- -가로세로 변환시 리로딩 방지 -->
             >
         </activity>
-        <activity android:name=".editVoice"></activity>
+        <activity android:name=".editVoice"
+            android:label="목소리 설정"></activity>
     </application>
 
 </manifest>

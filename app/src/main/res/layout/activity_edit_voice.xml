@@ -6,30 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".editVoice">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:padding="10dp"
-        android:text="목소리"
-        android:textColor="#000000"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.032" />
-
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.18">
+        app:layout_constraintVertical_bias="0.069">
 
         <Button
             android:layout_width="wrap_content"
@@ -38,7 +22,7 @@
             android:text= "디폴트"
             android:textAlignment="center"
             android:layout_weight="1"
-            android:background="#58ACFA"/>
+            android:background="@drawable/button_selector"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -47,7 +31,7 @@
             android:text= "여성 기본"
             android:textAlignment="center"
             android:layout_weight="1"
-            android:background="#E6E6E6"/>
+            android:background="@drawable/button_selector"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -56,7 +40,7 @@
             android:text= "남성 기본"
             android:textAlignment="center"
             android:layout_weight="1"
-            android:background="#E6E6E6"/>
+            android:background="@drawable/button_selector"/>
     </LinearLayout>
 
     <TextView
@@ -156,7 +140,7 @@
         android:id="@+id/explain"
         android:layout_width="259dp"
         android:layout_height="wrap_content"
-        android:background="#58ACFA"
+        android:background="#84C1FF"
         android:text="사용자가 평소 말하는 어투를 분석하여 비슷한 방식으로 말하게 하는 기능입니다."
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
