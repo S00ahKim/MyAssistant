@@ -10,9 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -36,7 +38,8 @@
         <activity android:name=".EditBackground"
             android:label="배경"/>
         <activity android:name=".FinalShow"
-            android:label="최종"/>
+            android:label="최종"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".MarketDetail"
             android:label="상품 상세"/>
         <activity android:name=".SkinDetail"
