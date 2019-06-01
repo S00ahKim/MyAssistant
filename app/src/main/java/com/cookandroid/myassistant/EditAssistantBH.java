@@ -1,6 +1,7 @@
 package com.cookandroid.myassistant;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,22 +19,6 @@ public class EditAssistantBH extends AppCompatActivity {
 
         Button prevButton = (Button) findViewById(R.id.prev) ;
         Button nextButton = (Button) findViewById(R.id.next) ;
-
-        prevButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditAssistantFH.class);
-                startActivity(intent);
-            }
-        });
-
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), EditAssistantEYE.class);
-                startActivity(intent);
-            }
-        });
 
         imageview1 = (ImageView)findViewById(R.id.mainImage);
         imageview2 = (ImageView)findViewById(R.id.longcurlyhair);
@@ -61,6 +46,22 @@ public class EditAssistantBH extends AppCompatActivity {
                 imageview5.setVisibility(View.VISIBLE);
                 imageview2.setVisibility(View.INVISIBLE);
                 imageview1.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        prevButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), EditAssistantFH.class);
+                startActivity(intent);
+            }
+        });
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), EditAssistantEYE.class);
+                startActivity(intent);
             }
         });
 

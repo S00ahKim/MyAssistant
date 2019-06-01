@@ -1,6 +1,8 @@
 package com.cookandroid.myassistant;
 
 import android.content.Intent;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,7 +75,7 @@ public class skinAdapter extends RecyclerView.Adapter<skinAdapter.ViewHolder> {
     }
 }
 
-class skinData{
+class skinData {
     public String name;
     public int img;
 

@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MarketDetail extends AppCompatActivity {
     public TextView detailviewTitle;
     public TextView detailviewAuthor;
@@ -45,9 +47,9 @@ public class MarketDetail extends AppCompatActivity {
 //        detailviewTextview.setText(Market.myDataset.get(position).text);
 //        priceButton.setText(Market.myDataset.get(position).price);
 
-        String title = getIntent().getStringExtra("title");
+        final String title = getIntent().getStringExtra("title");
         String author = getIntent().getStringExtra("author");
-        int img = getIntent().getIntExtra("img", 1);
+        final int img = getIntent().getIntExtra("img", 1);
         String detail = getIntent().getStringExtra("detail");
         String tag = getIntent().getStringExtra("tag");
         int price = getIntent().getIntExtra("price", 1);
@@ -63,6 +65,9 @@ public class MarketDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "구매가 완료되었습니다.", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(view.getContext(), MySkin.class);
+                intent.putExtra("title", title);
+                intent.putExtra("img", img);
             }
         });
     }

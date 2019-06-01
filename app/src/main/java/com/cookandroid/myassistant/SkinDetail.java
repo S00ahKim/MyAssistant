@@ -1,5 +1,6 @@
 package com.cookandroid.myassistant;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,7 @@ public class SkinDetail extends AppCompatActivity {
         TextView name = (TextView) findViewById(R.id.skinName);
         ImageView img = (ImageView) findViewById(R.id.skinImage);
         Button adaptButton = (Button) findViewById(R.id.adaptButton);
+        Button editthisButton = (Button) findViewById(R.id.editThis);
 
         skinname = getIntent().getStringExtra("name");
         skinimg = getIntent().getIntExtra("img", 1);
@@ -35,7 +37,14 @@ public class SkinDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "적용되었습니다.", Toast.LENGTH_LONG).show();
+            }
+        });
 
+        editthisButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), EditAssistantFH.class);
+                startActivity(intent);
             }
         });
 

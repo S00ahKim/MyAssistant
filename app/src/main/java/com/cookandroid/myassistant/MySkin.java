@@ -14,7 +14,7 @@ public class MySkin extends AppCompatActivity {
     private RecyclerView MySkinView;
     private RecyclerView.Adapter skinAdapter;
     private RecyclerView.LayoutManager skinLayoutManager;
-    private ArrayList<skinData> mySkinDataset;
+    public static ArrayList<skinData> mySkinDataset = new ArrayList<skinData>();
 
     public Button addMySkin;
     public Button addNewStyleSkin;
@@ -55,11 +55,16 @@ public class MySkin extends AppCompatActivity {
         MySkinView.setLayoutManager(skinLayoutManager);
 
         // specify an adapter (see also next example)
-        mySkinDataset = new ArrayList<>();
         skinAdapter = new skinAdapter(mySkinDataset);
         MySkinView.setAdapter(skinAdapter);
 
         // 이 부분으로 데이터를 추가하는 것!!
-        mySkinDataset.add(new skinData("내가만든예제", R.drawable.twintail));
+        mySkinDataset.add(new skinData("내가만든스킨", R.drawable.twintail));
+        mySkinDataset.add(new skinData("내가만든스킨", R.drawable.bgblue));
+
+        String getString = getIntent().getStringExtra("title");
+        int getInt = getIntent().getIntExtra("img",1);
+
+        mySkinDataset.add(new skinData(getString, getInt));
     }
 }
