@@ -16,7 +16,13 @@ public class EditAssistantFH extends AppCompatActivity {
         Button prevButton = (Button) findViewById(R.id.prev) ;
         Button nextButton = (Button) findViewById(R.id.next) ;
 
-        prevButton.setEnabled(false);
+        prevButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override

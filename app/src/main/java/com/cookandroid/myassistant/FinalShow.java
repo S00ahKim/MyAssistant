@@ -15,7 +15,8 @@ public class FinalShow extends AppCompatActivity {
         setContentView(R.layout.activity_final_show);
 
         Button setMyFrameButton = (Button) findViewById(R.id.setMyFrame) ;
-        Button saveMySkintButton = (Button) findViewById(R.id.saveMySkin) ;
+        Button saveMySkinButton = (Button) findViewById(R.id.saveMySkin) ;
+        Button goHomeButton = (Button) findViewById(R.id.goHome);
 
         setMyFrameButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,10 +26,18 @@ public class FinalShow extends AppCompatActivity {
             }
         });
 
-        saveMySkintButton.setOnClickListener(new View.OnClickListener() {
+        saveMySkinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "내가 만든 스킨에 저장되었습니다.", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        goHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
     }

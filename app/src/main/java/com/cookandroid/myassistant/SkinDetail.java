@@ -35,6 +35,7 @@ public class SkinDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "적용되었습니다.", Toast.LENGTH_LONG).show();
+
             }
         });
 

@@ -69,7 +69,7 @@
         android:id="@+id/priceButton"
         android:layout_width="257dp"
         android:layout_height="43dp"
-        android:background="#58ACFA"
+        android:background="#84C1FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintLeft_toLeftOf="parent"

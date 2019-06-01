@@ -76,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Edit"
-            android:background="#58ACFA"
+            android:background="#84C1FF"
             android:layout_margin="10dp"/>
 
         <Button
@@ -84,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Market"
-            android:background="#E6E6E6"
+            android:background="#D6EAFF"
             android:layout_margin="10dp"/>
 
     </LinearLayout>
@@ -94,7 +94,7 @@
         android:layout_width="104dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="#E6E6E6"
+        android:background="#D6EAFF"
         android:text="make new"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.29"
@@ -108,7 +108,7 @@
         android:layout_width="106dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:background="#E6E6E6"
+        android:background="#D6EAFF"
         android:text="Edit My Skin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.287"
