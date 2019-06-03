@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class EditBackground extends AppCompatActivity {
+    ImageView imageview1 = null;
+    ImageView imageview2=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +18,13 @@ public class EditBackground extends AppCompatActivity {
 
         Button prevButton = (Button) findViewById(R.id.prev) ;
         Button nextButton = (Button) findViewById(R.id.next) ;
+
+        imageview1 =findViewById(R.id.bgblue);
+        imageview2 = findViewById(R.id.mainImage);
+        ImageView bluebg = (ImageView)findViewById(R.id.bg4);
+
+        imageview1.setVisibility(View.INVISIBLE);
+        imageview2.setVisibility(View.VISIBLE);
 
         prevButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,14 +41,6 @@ public class EditBackground extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        final ImageView imageview1 = (ImageView)findViewById(R.id.bgblue);
-        final ImageView imageview2 = (ImageView)findViewById(R.id.blueeyes);
-
-        imageview1.setVisibility(View.INVISIBLE);
-        imageview2.setVisibility(View.VISIBLE);
-
-        final ImageView bluebg = (ImageView)findViewById(R.id.bg4);
 
         bluebg.setOnClickListener(new View.OnClickListener() {
             @Override

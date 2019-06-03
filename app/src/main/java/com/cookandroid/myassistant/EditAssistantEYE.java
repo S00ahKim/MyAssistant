@@ -6,11 +6,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class EditAssistantEYE extends AppCompatActivity {
-    int clicked = 0;
+    int clicked =0;
+    int rdclick=0;
+    int blclick=0;
+    int yeclick=0;
+
+    ImageView paint =null;
+    ImageView save =null;
+
+    Button red;
+    Button blue;
+    Button yellow;
+
+    ImageView re = null;
+    ImageView be = null;
+    ImageView ye = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +32,25 @@ public class EditAssistantEYE extends AppCompatActivity {
 
         Button prevButton = (Button) findViewById(R.id.prev) ;
         Button nextButton = (Button) findViewById(R.id.next) ;
+
+        paint = findViewById(R.id.paint);
+        save = findViewById(R.id.save);
+
+        re = findViewById(R.id.redeyes);
+        be = findViewById(R.id.blueeyes);
+        ye = findViewById(R.id.twintail);
+
+        red = findViewById(R.id.red);
+        blue = findViewById(R.id.blue);
+        yellow = findViewById(R.id.yellow);
+
+        //상태: 이미 visible 한걸 언급 ㄴㄴ
+        red.setVisibility(View.INVISIBLE);
+        blue.setVisibility(View.INVISIBLE);
+        yellow.setVisibility(View.INVISIBLE);
+
+        re.setVisibility(View.INVISIBLE);
+        be.setVisibility(View.INVISIBLE);
 
         prevButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,14 +68,6 @@ public class EditAssistantEYE extends AppCompatActivity {
             }
         });
 
-        ImageView paint = (ImageView) findViewById(R.id.paint);
-        final Button red = (Button) findViewById(R.id.red);
-        final Button blue = (Button) findViewById(R.id.blue);
-        final Button yellow = (Button) findViewById(R.id.yellow);
-
-        red.setVisibility(View.INVISIBLE);
-        blue.setVisibility(View.INVISIBLE);
-        yellow.setVisibility(View.INVISIBLE);
 
         paint.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,51 +77,37 @@ public class EditAssistantEYE extends AppCompatActivity {
                     blue.setVisibility(View.VISIBLE);
                     yellow.setVisibility(View.VISIBLE);
                     clicked += 1;
-                }else{
+                }
+                else{
                     red.setVisibility(View.INVISIBLE);
                     blue.setVisibility(View.INVISIBLE);
                     yellow.setVisibility(View.INVISIBLE);
-                    clicked -=1;
+                    clicked -= 1;
                 }
             }
         });
-
-        final ImageView imageview1 = (ImageView)findViewById(R.id.redeyes);
-        final ImageView imageview2 = (ImageView)findViewById(R.id.blueeyes);
-        final ImageView imageview3 = (ImageView)findViewById(R.id.twintail);
-
-        imageview1.setVisibility(View.INVISIBLE);
-        imageview2.setVisibility(View.INVISIBLE);
-        imageview3.setVisibility(View.VISIBLE);
+        
 
         red.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imageview1.setVisibility(View.VISIBLE);
-                imageview2.setVisibility(View.INVISIBLE);
-                imageview3.setVisibility(View.INVISIBLE);
+                re.setVisibility(View.VISIBLE);
             }
         });
 
         blue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imageview2.setVisibility(View.VISIBLE);
-                imageview1.setVisibility(View.INVISIBLE);
-                imageview3.setVisibility(View.INVISIBLE);
+                be.setVisibility(View.VISIBLE);
             }
         });
 
         yellow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                imageview2.setVisibility(View.INVISIBLE);
-                imageview1.setVisibility(View.INVISIBLE);
-                imageview3.setVisibility(View.VISIBLE);
+                ye.setVisibility(View.VISIBLE);
             }
         });
-
-        ImageView save = (ImageView) findViewById(R.id.save);
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override

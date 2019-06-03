@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FinalShow"
-    android:background="@drawable/bgblue">
+    android:background="@drawable/bluebgbg">
 
     <TextView
         android:layout_width="match_parent"

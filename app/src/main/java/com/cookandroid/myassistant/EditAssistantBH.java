@@ -35,8 +35,8 @@ public class EditAssistantBH extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 imageview2.setVisibility(View.VISIBLE);
-                imageview1.setVisibility(View.INVISIBLE);
-                imageview5.setVisibility(View.INVISIBLE);
+                imageview1.setVisibility(View.GONE);
+                imageview5.setVisibility(View.GONE);
             }
         });
 
@@ -44,8 +44,8 @@ public class EditAssistantBH extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 imageview5.setVisibility(View.VISIBLE);
-                imageview2.setVisibility(View.INVISIBLE);
-                imageview1.setVisibility(View.INVISIBLE);
+                imageview2.setVisibility(View.GONE);
+                imageview1.setVisibility(View.GONE);
             }
         });
 
