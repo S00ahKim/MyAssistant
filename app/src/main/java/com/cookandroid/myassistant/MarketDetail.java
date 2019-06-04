@@ -65,9 +65,6 @@ public class MarketDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(), "구매가 완료되었습니다.", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(view.getContext(), MySkin.class);
-                intent.putExtra("title", title);
-                intent.putExtra("img", img);
             }
         });
     }

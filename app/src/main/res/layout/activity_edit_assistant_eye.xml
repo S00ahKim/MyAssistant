@@ -10,34 +10,11 @@
         android:id="@+id/mainImage"
         android:layout_width="280dp"
         android:layout_height="280dp"
-        android:src="@drawable/twintail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.069" />
-
-    <ImageView
-        android:id="@+id/redeyes"
-        android:layout_width="280dp"
-        android:layout_height="280dp"
-        android:src="@drawable/redeyes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069"  />
-
-    <ImageView
-        android:id="@+id/blueeyes"
-        android:layout_width="280dp"
-        android:layout_height="280dp"
-        android:src="@drawable/blueeyes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.069"  />
 
     <ImageView
         android:id="@+id/paint"

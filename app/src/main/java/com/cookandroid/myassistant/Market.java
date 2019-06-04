@@ -63,23 +63,17 @@ public class Market extends AppCompatActivity {
 
         //-----------------------------------------------------------------------------------------------------------
 
-        // 인기 아이템
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
         mRecyclerView.setHasFixedSize(true);
 
-        // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        // specify an adapter (see also next example)
         myDataset = new ArrayList<>();
         mAdapter = new MyAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
 
-        // 이 부분으로 데이터를 추가하는 것!!
         myDataset.add(new MyData("루시아", "핑크조아", "#분홍머리, #공주님", R.drawable.favitem1, "분홍색을 좋아하시는 분들을 위해 만들어 보았습니다 ^^ 예쁘게 써주세요!", 300));
         myDataset.add(new MyData("강아지안은꼬마", "댕댕이", "#멍멍이와_함께, #안경, #발랄", R.drawable.favitem2, "강아지를 안은 꼬마가 제일 귀여운 법!!", 500));
         myDataset.add(new MyData("기본이미지", "MyAssistant", "#기본이_최고", R.drawable.defaultimage, "기본으로 제공되는 이미지입니다.", 0));
@@ -87,20 +81,15 @@ public class Market extends AppCompatActivity {
         // 여성 목록--------------------------------------------------------------------------------------------------------------
         fRecyclerView = (RecyclerView) findViewById(R.id.femaleItemMarket);
 
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
         fRecyclerView.setHasFixedSize(true);
 
-        // use a linear layout manager
         fLayoutManager = new LinearLayoutManager(this);
         fRecyclerView.setLayoutManager(fLayoutManager);
 
-        // specify an adapter (see also next example)
         femaleDataset = new ArrayList<>();
         fAdapter = new MyAdapter(femaleDataset);
         fRecyclerView.setAdapter(fAdapter);
 
-        // 이 부분으로 데이터를 추가하는 것!!
         femaleDataset.add(new MyData("갈색머리", "soyoung3", "#갈색머리, #초록눈", R.drawable.femaleitem1,"",100));
         femaleDataset.add(new MyData("엘사", "프로즌짱", "#하얀머리, #차분, #파란색", R.drawable.femaleitem2,"",100));
         femaleDataset.add(new MyData("붉은악마", "오필승코리아", "#카드놀이, #게임지원", R.drawable.femaleitem3,"",100));

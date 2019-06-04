@@ -59,12 +59,7 @@ public class MySkin extends AppCompatActivity {
         MySkinView.setAdapter(skinAdapter);
 
         // 이 부분으로 데이터를 추가하는 것!!
-        mySkinDataset.add(new skinData("내가만든스킨", R.drawable.twintail));
+        mySkinDataset.add(new skinData("기본이미지", R.drawable.defaultimage));
         mySkinDataset.add(new skinData("내가만든스킨", R.drawable.bgblue));
-
-        String getString = getIntent().getStringExtra("title");
-        int getInt = getIntent().getIntExtra("img",1);
-
-        mySkinDataset.add(new skinData(getString, getInt));
     }
 }
